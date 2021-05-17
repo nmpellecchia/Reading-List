@@ -4,11 +4,11 @@ from handleData import get_all_books
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
+def gen_index():
     return render_template("index.html")
 
 @app.route("/edit")
-def hello():
+def gen_editor():
     return render_template("bookEditor.html")
 
 ####### Manipulate data #####
