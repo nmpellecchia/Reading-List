@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+nav.container-fluid {
+  background: rgb(53, 51, 197);
+}
+
 form {
   border: 1px solid black;
   height: 70vh;
