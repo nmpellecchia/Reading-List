@@ -47,7 +47,14 @@
 
             <fieldset class="row justify-content-center">
               <label for="book-rating" class="col-2">Rating</label>
-              <input type="text" id="book-rating" class="col-3" />
+              <input
+                type="number"
+                min="0"
+                max="10"
+                id="book-rating"
+                class="col-1"
+              />
+              <p class="col-2">/ 10</p>
             </fieldset>
 
             <fieldset class="row justify-content-center">
