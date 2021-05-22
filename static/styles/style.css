@@ -9,6 +9,10 @@ nav.container-fluid {
   background: rgb(53, 51, 197);
 }
 
+.go-back-btn {
+  color: white;
+}
+
 form {
   border: 1px solid black;
   height: 70vh;
