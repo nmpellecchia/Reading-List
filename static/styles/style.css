@@ -9,6 +9,29 @@ nav.container-fluid {
   background: rgb(53, 51, 197);
 }
 
+.go-back-btn {
+  color: white;
+}
+
+.go-back-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.go-back-btn:after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: white;
+  transition: 500ms;
+}
+
+.go-back-btn:hover:after {
+  width: 30%;
+  transition: 500ms;
+}
+
 form {
   border: 1px solid black;
   height: 70vh;
