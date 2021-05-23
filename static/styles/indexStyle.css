@@ -9,18 +9,15 @@ nav.container-fluid {
   background: rgb(53, 51, 197);
 }
 
-.go-back-btn,
 .go-back-top-btn {
   color: white;
 }
 
-.go-back-btn:hover,
 .go-back-top-btn:hover {
   color: white;
   text-decoration: none;
 }
 
-.go-back-btn:after,
 .go-back-top-btn::after {
   display: block;
   content: '';
@@ -30,25 +27,15 @@ nav.container-fluid {
   transition: 500ms;
 }
 
-.go-back-btn:hover:after,
 .go-back-top-btn:hover:after {
   width: 30%;
   transition: 500ms;
 }
 
-form {
-  border: 1px solid black;
-  height: 70vh;
-}
-
-form > * {
-  height: 100%;
+.title.main {
+  background: rgb(53, 51, 197);
 }
 
 .title > * {
   text-align: center;
-}
-
-.user-inputs > * {
-  margin: 1rem;
 }
