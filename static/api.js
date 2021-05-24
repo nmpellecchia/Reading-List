@@ -1,12 +1,14 @@
 async function getAllBooks() {
   const JSONBookList = await fetch('/book-data').then(resp => {
     if (resp.status == 201) {
-      return convertToJSON(resp);
+      const r = convertToJSON(resp);
+      return r;
     } else {
       return showError();
     }
   });
-  console.log(JSONBookList);
+  console.log(JSONBookList.response);
+  return JSONBookList.response;
 }
 
 function convertToJSON(data) {
