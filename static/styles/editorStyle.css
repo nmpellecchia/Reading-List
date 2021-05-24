@@ -41,7 +41,7 @@ form > * {
   height: 100%;
 }
 
-.title > h1 {
+.title > * {
   text-align: center;
 }
 
