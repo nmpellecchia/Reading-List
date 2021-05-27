@@ -1,3 +1,5 @@
+import { capitalizeString } from './strManipulation.js';
+
 function populateBookList(list) {
   populateHeaders(list[0]);
   /* populateContent(); */
@@ -11,7 +13,7 @@ function populateHeaders(object) {
     /*  const cell = document.createElement('th');
     cell.innerHTML = categories[i];
     $header.appendChild(cell); */
-    $('.categories-row').append(`<th>${categories[i]}</th>`);
+    $('.categories-row').append(`<th>${capitalizeString(categories[i])}</th>`);
   }
 }
 
