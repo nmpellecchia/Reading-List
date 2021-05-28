@@ -13,22 +13,29 @@ function populateHeaders(object) {
     /*  const cell = document.createElement('th');
     cell.innerHTML = categories[i];
     $header.appendChild(cell); */
-    $('.categories-row').append(`<th>${capitalizeString(categories[i])}</th>`);
+    $('.categories-row').append(
+      `<th scope="col" data-category="${categories[i]}">${capitalizeString(
+        categories[i]
+      )}</th>`
+    );
   }
 }
 
 function populateContent(books) {
   const $listBody = $('.list-body');
+  let totalBooks = 0;
   /* Loop through all books */
   for (let i = 0; i <= books.length - 1; i++) {
-    const $row = $('<tr></tr>');
+    const $row = $('<tr scope="row"></tr>');
     /* Loop every category for a book */
     for (const [key, value] of Object.entries(books[i])) {
       console.log(`key:${key}, entries:${value}`);
       $row.append(`<td>${value}</td>`);
     }
     $listBody.append($row);
+    totalBooks++;
   }
+  $('.book-count').html(`Total Books: ${totalBooks}`);
 }
 
 export { populateBookList };
