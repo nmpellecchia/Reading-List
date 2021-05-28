@@ -30,7 +30,10 @@ function populateContent(books) {
     /* Loop every category for a book */
     for (const [key, value] of Object.entries(books[i])) {
       console.log(`key:${key}, entries:${value}`);
-      $row.append(`<td>${value}</td>`);
+      /* $row.append(`<td>${value}</td>`); */
+      key == 'rating'
+        ? $row.append(`<td>${value} / 10 </td>`)
+        : $row.append(`<td>${value}</td>`);
     }
     $listBody.append($row);
     totalBooks++;
