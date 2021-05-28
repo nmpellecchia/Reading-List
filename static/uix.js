@@ -2,7 +2,7 @@ import { capitalizeString } from './strManipulation.js';
 
 function populateBookList(list) {
   populateHeaders(list[0]);
-  /* populateContent(); */
+  populateContent(list);
 }
 
 function populateHeaders(object) {
@@ -14,6 +14,20 @@ function populateHeaders(object) {
     cell.innerHTML = categories[i];
     $header.appendChild(cell); */
     $('.categories-row').append(`<th>${capitalizeString(categories[i])}</th>`);
+  }
+}
+
+function populateContent(books) {
+  const $listBody = $('.list-body');
+  /* Loop through all books */
+  for (let i = 0; i <= books.length - 1; i++) {
+    const $row = $('<tr></tr>');
+    /* Loop every category for a book */
+    for (const [key, value] of Object.entries(books[i])) {
+      console.log(`key:${key}, entries:${value}`);
+      $row.append(`<td>${value}</td>`);
+    }
+    $listBody.append($row);
   }
 }
 
