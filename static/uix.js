@@ -35,9 +35,7 @@ function populateContent(books) {
         ? $row.append(`<td>${value} / 10 </td>`)
         : $row.append(`<td>${value}</td>`);
     }
-    $row.append(
-      '<a href="/templates/bookEditor.html" class="edit-btn">Edit</a>'
-    );
+    $row.append('<a href="/edit" class="edit-btn">Edit</a>');
     $listBody.append($row);
     totalBooks++;
   }
