@@ -8,15 +8,17 @@ function populateBookList(list) {
 function populateHeaders(object) {
   /* const $header = document.querySelector('.categories-row'); */
   const categories = Object.keys(object);
-
-  for (let i = 0; i <= categories.length - 1; i++) {
+  /* Don't use length - 1 because I want to create ampther element after */
+  for (let i = 0; i <= categories.length; i++) {
     /*  const cell = document.createElement('th');
     cell.innerHTML = categories[i];
     $header.appendChild(cell); */
     $('.categories-row').append(
-      `<th scope="col" data-category="${categories[i]}">${capitalizeString(
-        categories[i]
-      )}</th>`
+      categories[i]
+        ? `<th scope="col" data-category="${categories[i]}">${capitalizeString(
+            categories[i]
+          )}</th>`
+        : `<th scope="col" data-category="edit}"></th>`
     );
   }
 }
@@ -33,6 +35,9 @@ function populateContent(books) {
         ? $row.append(`<td>${value} / 10 </td>`)
         : $row.append(`<td>${value}</td>`);
     }
+    $row.append(
+      '<a href="/templates/bookEditor.html" class="edit-btn">Edit</a>'
+    );
     $listBody.append($row);
     totalBooks++;
   }
