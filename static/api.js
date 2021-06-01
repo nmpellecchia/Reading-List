@@ -25,6 +25,25 @@ async function addBook(e) {
   });
 }
 
+async function deleteBook(e) {
+  e.preventDefault();
+
+  const value = 'words of radiance,brandon sanderson,reading,7';
+
+  console.log('deleting: ' + value);
+
+  $.ajax({
+    type: 'DELETE',
+    url: '/change-data',
+    cache: false,
+    data: JSON.stringify(value),
+    contentType: 'application/json',
+    success: function (result) {
+      console.log(result);
+    },
+  });
+}
+
 /* This would have to be refactored manually if keys are added or deleted later */
 /* But for this simple case I think is more than enough */
 function orderList(listToOrder) {
@@ -43,4 +62,4 @@ function orderList(listToOrder) {
   return orderedList;
 }
 
-export { getAllBooks, addBook };
+export { getAllBooks, addBook, deleteBook };

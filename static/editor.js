@@ -1,4 +1,4 @@
-import { addBook } from './api.js';
+import { addBook, deleteBook } from './api.js';
 
 $(document).ready(function () {
   function areEMptyValues() {
@@ -35,6 +35,7 @@ $(document).ready(function () {
     } */
 
     addBook(e);
+    deleteBook(e);
     e.preventDefault();
   });
 });
