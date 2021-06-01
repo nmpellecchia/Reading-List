@@ -1,19 +1,20 @@
 $(document).ready(function () {
   function areInputsRight() {
     const $selectors = document.querySelectorAll('.user-selector');
-    const emptyValues = $selectors.forEach(selector => {
-      console.log(selector.value);
-      return isSelectorValid(selector.value);
-    });
-    return emptyValues;
-  }
+    let emptyValues = false;
 
-  function isSelectorValid(value) {
-    let emptyValue = false;
-    if (value.trim() == '') {
-      emptyValue = !emptyValue;
-      return true;
-    }
+    $selectors.forEach(selector => {
+      const value = selector.value;
+      console.log(value.trim());
+      console.log(value.trim() == '');
+
+      if (value.trim() == '') {
+        emptyValues = true;
+        return true;
+      }
+    });
+
+    return emptyValues;
   }
 
   function showErrorMsg() {
@@ -24,9 +25,11 @@ $(document).ready(function () {
   $('.add').click(e => {
     console.log('HEEEY');
 
-    const emptyValues = areInputsRight();
-    if (emptyValues) {
+    if (areInputsRight()) {
       showErrorMsg();
+      e.preventDefault();
+    } else {
+      console.log('ALL OK');
       e.preventDefault();
     }
   });
