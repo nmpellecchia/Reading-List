@@ -1,36 +1,33 @@
 $(document).ready(function () {
   function areInputsRight() {
     const $selectors = document.querySelectorAll('.user-selector');
-    $selectors.forEach(selector => {
-      /* Could use tagName. But nodeName is less prone to errors */
-      /* switch (selector.nodeName) {
-        case 'SELECT':
-          console.log('Im a select element!' + selector.nodeName);
-          console.log('Im a select element!' + selector.value);
-          isSelectValid(selector.value);
-          break;
-
-        default:
-          // Should be an input
-          console.log('Im an input!' + selector.nodeName);
-          console.log('Im an input!' + selector.value);
-          isInputValid(selector.value);
-          break;
-      } */
+    const emptyValues = $selectors.forEach(selector => {
       console.log(selector.value);
-      isSelectorValid(selector.value);
+      return isSelectorValid(selector.value);
     });
+    return emptyValues;
   }
 
   function isSelectorValid(value) {
-    value ? console.log(true) : console.log(false);
+    let emptyValue = false;
+    if (value.trim() == '') {
+      emptyValue = !emptyValue;
+      return true;
+    }
+  }
+
+  function showErrorMsg() {
+    alert('There are empty values!');
   }
 
   /* Event Listener */
   $('.add').click(e => {
-    e.preventDefault();
     console.log('HEEEY');
 
-    areInputsRight();
+    const emptyValues = areInputsRight();
+    if (emptyValues) {
+      showErrorMsg();
+      e.preventDefault();
+    }
   });
 });
