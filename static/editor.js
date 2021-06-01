@@ -1,7 +1,7 @@
 import { addBook, deleteBook } from './api.js';
 
 $(document).ready(function () {
-  function areEMptyValues() {
+  function areEmptyValues() {
     const $selectors = document.querySelectorAll('.user-selector');
     let emptyValues = false;
 
@@ -25,17 +25,13 @@ $(document).ready(function () {
   $('.add').click(e => {
     console.log('HEEEY');
 
-    /* if (areEmptyValues()) {
+    if (areEmptyValues()) {
       showErrorMsg();
       e.preventDefault();
     } else {
       console.log('ALL OK');
       addBook(e);
       e.preventDefault();
-    } */
-
-    addBook(e);
-    deleteBook(e);
-    e.preventDefault();
+    }
   });
 });
