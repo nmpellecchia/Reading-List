@@ -10,21 +10,10 @@ async function getAllBooks() {
 async function addBook(e) {
   e.preventDefault();
 
-  /* const userInput = document.querySelector('#add-book');
-  const value = userInput.value; */
   const value = 'words of radiance,brandon sanderson,reading,7';
 
   console.log('adding: ' + value);
-  /* const fetchRequest = {
-    cache: 'no-cache',
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify(value),
-  };
-  // connect with API
-  const bookToPost = await fetch('/change-data', fetchRequest); */
+
   $.ajax({
     type: 'POST',
     url: '/change-data',
