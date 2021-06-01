@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, json, jsonify
-from handleData import get_all_books
+from handleData import get_all_books, add_book, delete_book
 
 app = Flask(__name__)
 
@@ -20,3 +20,19 @@ def get_data():
 
 if __name__ == "__main__":
     app.run()
+
+@app.route('/change-data', methods=['POST', 'DELETE'])
+def modifying_values():
+    book = request.get_json()
+    print(book)
+    if request.method == 'POST':
+        print('adding a book!')
+        print(book)
+        add_book(book)
+        return 'OK',200
+    # DELETE
+    else:
+        print('deleting book: ')
+        print(book)
+        delete_book(book)
+        return 'OK', 200

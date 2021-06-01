@@ -1,5 +1,7 @@
+import { addBook } from './api.js';
+
 $(document).ready(function () {
-  function areInputsRight() {
+  function areEMptyValues() {
     const $selectors = document.querySelectorAll('.user-selector');
     let emptyValues = false;
 
@@ -23,12 +25,16 @@ $(document).ready(function () {
   $('.add').click(e => {
     console.log('HEEEY');
 
-    if (areInputsRight()) {
+    /* if (areEmptyValues()) {
       showErrorMsg();
       e.preventDefault();
     } else {
       console.log('ALL OK');
+      addBook(e);
       e.preventDefault();
-    }
+    } */
+
+    addBook(e);
+    e.preventDefault();
   });
 });
