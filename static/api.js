@@ -1,12 +1,4 @@
 async function getAllBooks() {
-  /* const JSONBookList = await fetch('/book-data').then(resp => {
-    if (resp.status == 201) {
-      const r = convertToJSON(resp);
-      return r;
-    } else {
-      return showError();
-    }
-  }); */
   const JSONBookList = await $.get('/book-data', resp => {
     return resp;
   });
@@ -32,9 +24,5 @@ function orderList(listToOrder) {
   });
   return orderedList;
 }
-
-/* function convertToJSON(data) {
-  return data.json();
-} */
 
 export { getAllBooks };

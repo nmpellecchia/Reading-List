@@ -5,8 +5,6 @@ $(document).ready(function () {
 
     $selectors.forEach(selector => {
       const value = selector.value;
-      console.log(value.trim());
-      console.log(value.trim() == '');
 
       if (value.trim() == '') {
         emptyValues = true;
