@@ -39,16 +39,18 @@ async function addBook(e) {
 
 async function deleteBook(e) {
   e.preventDefault();
+  const $bookTitle = $('#book-title');
+  const bookToDelete = $bookTitle.value;
 
   const value = 'words of radiance,brandon sanderson,reading,7';
 
-  console.log('deleting: ' + value);
+  console.log('deleting: ' + bookToDelete);
 
   $.ajax({
     type: 'DELETE',
     url: '/change-data',
     cache: false,
-    data: JSON.stringify(value),
+    data: JSON.stringify(bookToDelete),
     contentType: 'application/json',
     success: function (result) {
       console.log(result);
