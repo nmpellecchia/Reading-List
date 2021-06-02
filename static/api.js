@@ -12,19 +12,19 @@ async function getAllBooks() {
 async function addBook(e) {
   e.preventDefault();
   const $selectors = document.querySelectorAll('.user-selector');
-  const values = [];
+  const bookToAdd = [];
 
   $selectors.forEach(selector => {
-    let value = selector.value;
-    value = stripWhitespace(value);
-    value = convertToLowercase(value);
-    values.push(value);
+    let bookProperty = selector.value;
+    bookProperty = stripWhitespace(bookProperty);
+    bookProperty = convertToLowercase(bookProperty);
+    bookToAdd.push(bookProperty);
   });
-  console.log(values.toString());
+  console.log(bookToAdd.toString());
 
   const value = 'words of radiance,brandon sanderson,reading,7';
 
-  console.log('adding: ' + value);
+  console.log('adding: ' + bookToAdd);
 
   /* $.ajax({
     type: 'POST',
