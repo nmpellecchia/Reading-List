@@ -34,4 +34,10 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+
+  $('.delete').click(e => {
+    console.log('WOHOO');
+    deleteBook(e);
+    e.preventDefault();
+  });
 });

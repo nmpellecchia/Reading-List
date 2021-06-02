@@ -1,4 +1,4 @@
-import { stripWhitespace, convertToLowercase } from './strManipulation.js';
+import { standarizeString } from './strManipulation.js';
 
 async function getAllBooks() {
   const JSONBookList = await $.get('/book-data', resp => {
@@ -15,9 +15,8 @@ async function addBook(e) {
   const bookToAdd = [];
 
   $selectors.forEach(selector => {
-    let bookProperty = selector.value;
-    bookProperty = stripWhitespace(bookProperty);
-    bookProperty = convertToLowercase(bookProperty);
+    let bookProperty = standarizeString(selector.value);
+
     bookToAdd.push(bookProperty);
   });
   console.log(bookToAdd.toString());
@@ -26,21 +25,21 @@ async function addBook(e) {
 
   console.log('adding: ' + bookToAdd);
 
-  /* $.ajax({
+  $.ajax({
     type: 'POST',
     url: '/change-data',
-    data: JSON.stringify(value),
+    data: JSON.stringify(bookToAdd.toString()),
     contentType: 'application/json',
     success: function (result) {
       console.log(result);
     },
-  }); */
+  });
 }
 
 async function deleteBook(e) {
   e.preventDefault();
   const $bookTitle = $('#book-title');
-  const bookToDelete = $bookTitle.value;
+  const bookToDelete = standarizeString($bookTitle.val());
 
   const value = 'words of radiance,brandon sanderson,reading,7';
 
