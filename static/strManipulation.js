@@ -7,7 +7,13 @@ function convertToLowercase(str) {
 }
 
 function stripWhitespace(str) {
-  $.trim(str);
+  return str.trim();
 }
 
-export { capitalizeString, convertToLowercase, stripWhitespace };
+function standardizeString(str) {
+  let newStr = stripWhitespace(str);
+  newStr = convertToLowercase(str);
+  return newStr;
+}
+
+export { capitalizeString, convertToLowercase, standardizeString };

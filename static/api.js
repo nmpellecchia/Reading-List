@@ -1,4 +1,4 @@
-import { standarizeString } from './strManipulation.js';
+import { standardizeString } from './strManipulation.js';
 
 async function getAllBooks() {
   const JSONBookList = await $.get('/book-data', resp => {
@@ -15,7 +15,7 @@ async function addBook(e) {
   const bookToAdd = [];
 
   $selectors.forEach(selector => {
-    let bookProperty = standarizeString(selector.value);
+    let bookProperty = standardizeString(selector.value);
 
     bookToAdd.push(bookProperty);
   });
@@ -39,7 +39,7 @@ async function addBook(e) {
 async function deleteBook(e) {
   e.preventDefault();
   const $bookTitle = $('#book-title');
-  const bookToDelete = standarizeString($bookTitle.val());
+  const bookToDelete = standardizeString($bookTitle.val());
 
   const value = 'words of radiance,brandon sanderson,reading,7';
 
