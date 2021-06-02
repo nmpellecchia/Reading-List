@@ -1,3 +1,5 @@
+import { stripWhitespace, convertToLowercase } from './strManipulation.js';
+
 async function getAllBooks() {
   const JSONBookList = await $.get('/book-data', resp => {
     return resp;
@@ -13,7 +15,10 @@ async function addBook(e) {
   const values = [];
 
   $selectors.forEach(selector => {
-    values.push(selector.value);
+    let value = selector.value;
+    value = stripWhitespace(value);
+    value = convertToLowercase(value);
+    values.push(value);
   });
   console.log(values.toString());
 
