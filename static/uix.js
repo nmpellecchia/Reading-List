@@ -33,7 +33,7 @@ function populateContent(books) {
     for (const [key, value] of Object.entries(books[i])) {
       key == 'rating'
         ? $row.append(`<td>${value} / 10 </td>`)
-        : $row.append(`<td>${value}</td>`);
+        : $row.append(`<td>${capitalizeString(value)}</td>`);
     }
     $row.append('<a href="/edit" class="edit-btn">Edit</a>');
     $listBody.append($row);
