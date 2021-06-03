@@ -1,4 +1,4 @@
-import { getAllBooks } from './api.js';
+import { getAllBooks, getBook } from './api.js';
 import { populateBookList } from './uix.js';
 
 $(document).ready(function () {
@@ -8,4 +8,7 @@ $(document).ready(function () {
   }
 
   initialize();
+
+  /* Test code */
+  getBook('1984');
 });
