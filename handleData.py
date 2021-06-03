@@ -18,9 +18,7 @@ def get_all_books():
                 'status': status,
                 'rating': rating
             })
-    print('get books fn')
-    print(books)
-    print(book_list)
+
     return book_list
 
 ##################
@@ -43,5 +41,4 @@ def delete_book(book):
     with open('book-list.csv', 'w') as reading_list:
         for line in lines:
             if book_to_delete not in line.strip("\n"):
-                print("We'll rewrite this line: " + line)
                 reading_list.write(line)

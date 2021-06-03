@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json, jsonify
+from flask import Flask, render_template, request, jsonify
 from handleData import get_all_books, add_book, delete_book
 
 app = Flask(__name__)
