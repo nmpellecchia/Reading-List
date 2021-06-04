@@ -32,10 +32,15 @@ function populateContent(books) {
     /* Loop every category for a book */
     for (const [key, value] of Object.entries(books[i])) {
       key == 'rating'
-        ? $row.append(`<td>${value} / 10 </td>`)
-        : $row.append(`<td>${capitalizeString(value)}</td>`);
+        ? $row.append(`<td data-index="${i}" id="${key}">${value} / 10 </td>`)
+        : $row.append(
+            `<td data-index="${i}" id="${key}">${capitalizeString(value)}</td>`
+          );
     }
-    $row.append('<a href="/edit" class="edit-btn">Edit</a>');
+    /* $row.append('<a href="#" class="edit-btn">Edit</a>'); */
+    $row.append(
+      `<button type="submit" data-target="/edit" data-index="${i}" class="edit-btn">Edit</button>`
+    );
     $listBody.append($row);
     totalBooks++;
   }
