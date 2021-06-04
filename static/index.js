@@ -1,4 +1,5 @@
 import { getAllBooks, getBook } from './api.js';
+import { convertToLowercase } from './strManipulation.js';
 import { populateBookList } from './uix.js';
 
 $(document).ready(function () {
@@ -13,7 +14,10 @@ $(document).ready(function () {
     console.log('it works?' + e.target.className);
 
     const $bookTitle = $(e.target).siblings('#title');
+    const lowercaseTitle = convertToLowercase($bookTitle[0].textContent);
     console.log($bookTitle[0].textContent);
+
+    getBook(lowercaseTitle);
     /* e.preventDefault();
     var url = $(this).data('target');
     location.replace(url); */
