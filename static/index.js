@@ -1,4 +1,5 @@
 import { getAllBooks, getBook } from './api.js';
+import { saveToLocalStorage } from './Storage.js';
 import { convertToLowercase } from './strManipulation.js';
 import { populateBookList } from './uix.js';
 
@@ -10,14 +11,17 @@ $(document).ready(function () {
 
   initialize();
 
-  $(document).on('click', '.edit-btn', function (e) {
+  $(document).on('click', '.edit-btn', async function (e) {
     console.log('it works?' + e.target.className);
 
     const $bookTitle = $(e.target).siblings('#title');
     const lowercaseTitle = convertToLowercase($bookTitle[0].textContent);
     console.log($bookTitle[0].textContent);
 
-    getBook(lowercaseTitle);
+    const userBook = await getBook(lowercaseTitle);
+    console.log('userBook');
+    console.log(userBook);
+    saveToLocalStorage(userBook);
     /* e.preventDefault();
     var url = $(this).data('target');
     location.replace(url); */

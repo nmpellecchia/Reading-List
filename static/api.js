@@ -69,6 +69,8 @@ async function getBook(bookToGet) {
     } */
     return book.title == bookToGet;
   });
+
+  return userBook;
   console.log('user book');
   console.log(userBook);
   console.log('user book');
