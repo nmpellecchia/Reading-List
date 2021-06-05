@@ -12,19 +12,19 @@ $(document).ready(function () {
   initialize();
 
   $(document).on('click', '.edit-btn', async function (e) {
-    console.log('it works?' + e.target.className);
-
+    /* get the title inside the table */
     const $bookTitle = $(e.target).siblings('#title');
     const lowercaseTitle = convertToLowercase($bookTitle[0].textContent);
-    console.log($bookTitle[0].textContent);
-
+    /* get the book from the database */
     const userBook = await getBook(lowercaseTitle);
     console.log('userBook');
     console.log(userBook);
+    /* Save it  */
     saveToLocalStorage(userBook);
+    /* Redirect to the edit page */
     /* e.preventDefault();
-    var url = $(this).data('target');
-    location.replace(url); */
+    var url = $(this).data('target'); */
+    location.replace('/edit');
   });
   /* Test code */
   getBook('1984');
