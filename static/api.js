@@ -6,6 +6,7 @@ async function getAllBooks() {
   });
   /* I don't like the order the data is sent. So I will change it */
   const orderedList = orderList(JSONBookList.response);
+  console.log(orderedList);
   return orderedList;
 }
 
@@ -57,6 +58,24 @@ async function deleteBook(e) {
   });
 }
 
+async function getBook(bookToGet) {
+  /* As this project will contain a small amount of data this method is viable */
+  const fullBookList = await getAllBooks();
+  /* grep will filter the array and only return the book that the user needs */
+  const userBook = $.grep(fullBookList, book => {
+    console.log(book);
+    /* if (book.title == bookToGet) {
+      return book;
+    } */
+    return book.title == bookToGet;
+  });
+
+  return userBook;
+  console.log('user book');
+  console.log(userBook);
+  console.log('user book');
+}
+
 /* This would have to be refactored manually if keys are added or deleted later */
 /* But for this simple case I think is more than enough */
 function orderList(listToOrder) {
@@ -75,4 +94,4 @@ function orderList(listToOrder) {
   return orderedList;
 }
 
-export { getAllBooks, addBook, deleteBook };
+export { getAllBooks, addBook, deleteBook, getBook };
