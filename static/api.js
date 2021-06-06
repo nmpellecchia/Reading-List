@@ -6,12 +6,10 @@ async function getAllBooks() {
   });
   /* I don't like the order the data is sent. So I will change it */
   const orderedList = orderList(JSONBookList.response);
-  console.log(orderedList);
   return orderedList;
 }
 
-async function addBook(e) {
-  e.preventDefault();
+async function addBook() {
   const $selectors = document.querySelectorAll('.user-selector');
   const bookToAdd = [];
 
@@ -20,11 +18,6 @@ async function addBook(e) {
 
     bookToAdd.push(bookProperty);
   });
-  console.log(bookToAdd.toString());
-
-  const value = 'words of radiance,brandon sanderson,reading,7';
-
-  console.log('adding: ' + bookToAdd);
 
   $.ajax({
     type: 'POST',
@@ -37,14 +30,9 @@ async function addBook(e) {
   });
 }
 
-async function deleteBook(e) {
-  e.preventDefault();
+async function deleteBook() {
   const $bookTitle = $('#book-title');
   const bookToDelete = standardizeString($bookTitle.val());
-
-  const value = 'words of radiance,brandon sanderson,reading,7';
-
-  console.log('deleting: ' + bookToDelete);
 
   $.ajax({
     type: 'DELETE',
@@ -63,17 +51,10 @@ async function getBook(bookToGet) {
   const fullBookList = await getAllBooks();
   /* grep will filter the array and only return the book that the user needs */
   const userBook = $.grep(fullBookList, book => {
-    console.log(book);
-    /* if (book.title == bookToGet) {
-      return book;
-    } */
     return book.title == bookToGet;
   });
 
   return userBook;
-  console.log('user book');
-  console.log(userBook);
-  console.log('user book');
 }
 
 /* This would have to be refactored manually if keys are added or deleted later */
