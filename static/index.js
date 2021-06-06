@@ -17,13 +17,9 @@ $(document).ready(function () {
     const lowercaseTitle = convertToLowercase($bookTitle[0].textContent);
     /* get the book from the database */
     const userBook = await getBook(lowercaseTitle);
-    console.log('userBook');
-    console.log(userBook);
     /* Save it  */
     saveToLocalStorage(userBook);
-    /* Redirect to the edit page */
-    /* e.preventDefault();
-    var url = $(this).data('target'); */
+    /* Redirect to the editor */
     location.replace('/edit');
   });
 });

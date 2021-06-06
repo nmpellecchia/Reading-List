@@ -5,7 +5,6 @@ $(document).ready(function () {
   /* In case the user wanted to edit an existent book, see if there is anything inside the localstorage */
   /* Could doo localStorage == null. But this method also takes into acount undefined,false,0,etc. */
   if (localStorage['book']) {
-    console.log('We have a book bois');
     populateInputs();
   }
   /* Functions regarding the addition or deletion of a book */
@@ -30,22 +29,21 @@ $(document).ready(function () {
   }
 
   /* Event Listener */
-  $('.add').click(e => {
-    console.log('HEEEY');
-
+  $('.add').click(() => {
     if (areEmptyValues()) {
       showErrorMsg();
-      e.preventDefault();
     } else {
-      console.log('ALL OK');
-      addBook(e);
-      e.preventDefault();
+      console.log('This should not appear');
+      /* Delete the book from the database*/
+      deleteBook();
+      /* Now add with the new values */
+      addBook();
+      window.location.href = '/';
     }
   });
 
-  $('.delete').click(e => {
-    console.log('WOHOO');
-    deleteBook(e);
-    e.preventDefault();
+  $('.delete').click(() => {
+    deleteBook();
+    window.location.href = '/';
   });
 });
