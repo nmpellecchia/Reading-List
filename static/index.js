@@ -26,6 +26,4 @@ $(document).ready(function () {
     var url = $(this).data('target'); */
     location.replace('/edit');
   });
-  /* Test code */
-  getBook('1984');
 });
