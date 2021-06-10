@@ -47,6 +47,41 @@ nav.container-fluid {
 
 /* Header */
 
+.title-wrapper {
+  background: var(--main-color-base);
+}
+
+.header-left-deco {
+  background: var(--main-color-base);
+  min-height: 6rem;
+  /* transform: rotate(-15deg); */
+  /* width: 0;
+  height: 0;
+  background: #000;
+  border-top: 3rem solid var(--main-color-base);
+  border-right: 50px solid transparent; */
+  z-index: -1;
+}
+
+.header-center-triangle {
+  width: 0;
+  /*  height: 0; */
+  border-left: 6rem solid var(--main-color-base);
+  border-right: 6rem solid var(--main-color-base);
+  border-bottom: 6rem solid black;
+}
+
+.header-right-deco {
+  background: var(--main-color-base);
+  min-height: 6rem;
+  /* transform: rotate(15deg); */
+  /* width: 0;
+  height: 0;
+  border-top: 150px solid var(--main-color-base);
+  border-left: 300px solid transparent; */
+  z-index: -1;
+}
+
 /* nav.container-fluid {
   background: rgb(53, 51, 197);
 }
