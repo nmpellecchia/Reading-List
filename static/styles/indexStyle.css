@@ -51,35 +51,18 @@ nav.container-fluid {
   background: var(--main-color-base);
 }
 
-.header-left-deco {
-  background: var(--main-color-base);
-  min-height: 6rem;
-  /* transform: rotate(-15deg); */
-  /* width: 0;
-  height: 0;
-  background: #000;
-  border-top: 3rem solid var(--main-color-base);
-  border-right: 50px solid transparent; */
-  z-index: -1;
+.header-deco {
+  width: 100%;
 }
 
-.header-center-triangle {
+.header-deco-triangle {
+  background: var(--main-color-base);
+  border-color: transparent var(--main-color-base) var(--white-shadow)
+    var(--main-color-base);
+  border-style: solid;
+  border-width: 0 49.9vw 17vw 49.9vw;
+  height: 0;
   width: 0;
-  /*  height: 0; */
-  border-left: 6rem solid var(--main-color-base);
-  border-right: 6rem solid var(--main-color-base);
-  border-bottom: 6rem solid black;
-}
-
-.header-right-deco {
-  background: var(--main-color-base);
-  min-height: 6rem;
-  /* transform: rotate(15deg); */
-  /* width: 0;
-  height: 0;
-  border-top: 150px solid var(--main-color-base);
-  border-left: 300px solid transparent; */
-  z-index: -1;
 }
 
 /* nav.container-fluid {
