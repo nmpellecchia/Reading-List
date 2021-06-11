@@ -12,7 +12,9 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(var(--white), var(--white-shadow));
+  background-image: /* linear-gradient(var(--white), var(--white-shadow)); */ var(
+    --white
+  );
 }
 
 /* Navbar */
@@ -47,6 +49,10 @@ nav.container-fluid {
 
 /* Header */
 
+header {
+  width: 100vw;
+}
+
 .title-wrapper {
   background: var(--main-color-base);
 }
@@ -56,47 +62,16 @@ nav.container-fluid {
 }
 
 .header-deco-triangle {
+  /* generate the shape using left,right and bottom borders */
   background: var(--main-color-base);
   border-color: transparent var(--main-color-base) var(--white-shadow)
     var(--main-color-base);
   border-style: solid;
-  border-width: 0 49.9vw 17vw 49.9vw;
+  /* make it span the entire width. 50 / 50 goes outside the windows */
+  border-width: 0 49.93vw 17vw 49.93vw;
   height: 0;
   width: 0;
-}
 
-/* nav.container-fluid {
-  background: rgb(53, 51, 197);
+  -webkit-box-shadow: 0px 25px 17px -11px var(--white-shadow);
+  box-shadow: 0px 25px 17px -11px var(--white-shadow);
 }
-
-.go-back-top-btn {
-  color: white;
-}
-
-.go-back-top-btn:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.go-back-top-btn::after {
-  display: block;
-  content: '';
-  height: 3px;
-  width: 0%;
-  background: white;
-  transition: 500ms;
-}
-
-.go-back-top-btn:hover:after {
-  width: 30%;
-  transition: 500ms;
-}
-
-.title.main {
-  background: rgb(53, 51, 197);
-}
-
-.title > * {
-  text-align: center;
-}
- */
