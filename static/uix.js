@@ -39,7 +39,7 @@ function populateContent(books) {
     }
     /* $row.append('<a href="#" class="edit-btn">Edit</a>'); */
     $row.append(
-      `<button type="submit" data-target="/edit" data-index="${i}" class="btn btn-outline-danger w-50 edit-btn">Edit</button>`
+      `<td class="container d-flex justify-content-center"><button type="submit" data-target="/edit" data-index="${i}" class="row btn btn-outline-danger w-75 edit-btn">Edit</button></td>`
     );
     $listBody.append($row);
     totalBooks++;
