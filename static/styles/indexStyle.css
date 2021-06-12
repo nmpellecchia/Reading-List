@@ -81,3 +81,21 @@ header {
 }
 
 /* Buttons */
+
+.btn {
+  font-family: var(--title-font);
+}
+
+.btn-danger {
+  background-color: var(--main-color-base);
+}
+
+.btn-danger:hover {
+  background-color: var(--main-color-light);
+  border-color: var(--main-color-light);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--main-color-base);
+  border-color: var(--main-color-base);
+}
