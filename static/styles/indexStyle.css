@@ -18,6 +18,7 @@ body {
     --white
   );
   font-family: var(--text-font);
+  color: var(--black);
 }
 
 /* Navbar */
@@ -76,8 +77,8 @@ header {
   height: 0;
   width: 0;
 
-  -webkit-box-shadow: 0px 25px 17px -11px var(--white-shadow);
-  box-shadow: 0px 25px 17px -11px var(--white-shadow);
+  -webkit-box-shadow: 0px 28px 15px 2px var(--white-shadow);
+  box-shadow: 0px 28px 15px 2px var(--white-shadow);
 }
 
 /* Buttons */
@@ -88,6 +89,7 @@ header {
 
 .btn-danger {
   background-color: var(--main-color-base);
+  color: var(--white);
 }
 
 .btn-danger:hover {
@@ -104,4 +106,25 @@ header {
 
 table.book-list {
   table-layout: fixed;
+}
+
+tr.categories-row th.category {
+  background-color: var(--main-color-shadow);
+  border-color: var(--main-color-shadow);
+  color: var(--white);
+}
+
+tr.thead-deco th {
+  border: none;
+}
+
+tr.thead-deco th .thead-deco-triangle {
+  overflow: none;
+  background: var(--main-color-shadow);
+  border-color: transparent transparent var(--main-color-base)
+    var(--main-color-shadow);
+  border-style: solid;
+  border-width: 0 0 2.5vw 60vw;
+  height: 0;
+  width: 100%;
 }
