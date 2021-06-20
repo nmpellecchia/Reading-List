@@ -110,10 +110,12 @@ table.book-list {
 
 thead.thead-dark {
   border: 2px solid var(--main-color-shadow);
+  border-bottom: 2px solid var(--main-color-base);
 }
 
 tbody.list-body {
   border: 2px solid var(--main-color-shadow);
+  border-bottom: 2px solid var(--main-color-base);
 }
 
 tr.categories-row th.category {
@@ -127,12 +129,12 @@ tr.thead-deco th {
 }
 
 tr.thead-deco th .thead-deco-triangle {
-  overflow: none;
+  overflow: hidden;
   background: var(--main-color-shadow);
   border-color: transparent transparent var(--main-color-base)
     var(--main-color-shadow);
   border-style: solid;
-  border-width: 0 0 1vw 60vw;
-  /* height: 0; */
-  /* width: 100%; */
+  border-width: 0 0 2vh 65vw;
+  height: 0;
+  width: 100%;
 }
