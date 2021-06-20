@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Bangers&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -17,18 +22,33 @@
   <body>
     <nav class="container-fluid align-middle">
       <div class="row d-flex align-items-center">
-        <h2 class="col">Reading List</h2>
+        <a
+          href="#"
+          class="col nav-btn d-flex justify-content-center flex-column"
+          >Go to github page</a
+        >
         <div class="col-6"></div>
-        <a href="#" class="col go-back-top-btn">Back to top</a>
+        <a
+          href="#"
+          class="col nav-btn d-flex justify-content-center flex-column"
+          >Back to top</a
+        >
       </div>
     </nav>
-    <div class="title main">
-      <h1>Reading List</h1>
-      <h2>Your online library</h2>
-    </div>
+    <header class="container-fluid m-0 p-0">
+      <div class="title-wrapper text-center">
+        <h1 class="title">Reading List</h1>
+        <h2 class="subtitle mb-0 pb-5">
+          Add, edit and delete the books you read!
+        </h2>
+      </div>
+      <div class="row header-deco">
+        <div class="header-deco-triangle"></div>
+      </div>
+    </header>
 
-    <form action="/edit">
-      <input type="submit" value="Add Book" />
+    <form action="/edit" class="d-flex justify-content-center p-5 mt-3">
+      <input type="submit" value="Add Book" class="btn btn-danger p-3 w-25" />
     </form>
 
     <div
@@ -40,22 +60,98 @@
         p-3
       "
     >
-      <table class="book-list table table-bordered table-hover table-sm">
+      <table class="book-list table table-bordered table-hover table-sm w-75">
         <caption class="book-count">
           List of books
         </caption>
         <thead class="thead-dark">
           <tr class="categories-row">
             <!--  -->
+            <th scope="col" class="category">1</th>
+            <th scope="col" class="category">2</th>
+            <th scope="col" class="category">3</th>
+            <th scope="col" class="category">4</th>
+            <th scope="col" class="category">5</th>
+          </tr>
+          <tr class="thead-deco">
+            <th colspan="5" class="p-0 m-0">
+              <div class="thead-deco-triangle"></div>
+            </th>
           </tr>
         </thead>
 
         <tbody class="list-body">
           <!--  -->
+          <tr>
+            <td class="w-25">1</td>
+            <td class="w-25">2</td>
+            <td class="w-25">3</td>
+            <td class="w-25">4</td>
+            <td class="container d-flex justify-content-center">
+              <button type="submit" class="row btn btn-outline-danger w-75">
+                Edit
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-25">1</td>
+            <td class="w-25">2</td>
+            <td class="w-25">3</td>
+            <td class="w-25">4</td>
+            <td class="container d-flex justify-content-center">
+              <button type="submit" class="row btn btn-outline-danger w-75">
+                Edit
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-25">1</td>
+            <td class="w-25">2</td>
+            <td class="w-25">3</td>
+            <td class="w-25">4</td>
+            <td class="container d-flex justify-content-center">
+              <button type="submit" class="row btn btn-outline-danger w-75">
+                Edit
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-25">1</td>
+            <td class="w-25">2</td>
+            <td class="w-25">3</td>
+            <td class="w-25">4</td>
+            <td class="container d-flex justify-content-center">
+              <button type="submit" class="row btn btn-outline-danger w-75">
+                Edit
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-25">1</td>
+            <td class="w-25">2</td>
+            <td class="w-25">3</td>
+            <td class="w-25">4</td>
+            <td class="container d-flex justify-content-center">
+              <button type="submit" class="row btn btn-outline-danger w-75">
+                Edit
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-25">1</td>
+            <td class="w-25">2</td>
+            <td class="w-25">3</td>
+            <td class="w-25">4</td>
+            <td class="container d-flex justify-content-center">
+              <button type="submit" class="row btn btn-outline-danger w-75">
+                Edit
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-    <script src="../static/index.js" type="module"></script>
+    <!-- <script src="../static/index.js" type="module"></script> -->
   </body>
 </html>

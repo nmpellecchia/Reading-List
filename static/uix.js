@@ -15,10 +15,10 @@ function populateHeaders(object) {
     $header.appendChild(cell); */
     $('.categories-row').append(
       categories[i]
-        ? `<th scope="col" data-category="${categories[i]}">${capitalizeString(
+        ? `<th scope="col" class="category" data-category="${
             categories[i]
-          )}</th>`
-        : `<th scope="col" data-category="edit}"></th>`
+          }">${capitalizeString(categories[i])}</th>`
+        : `<th scope="col" class="category" data-category="edit}"></th>`
     );
   }
 }
@@ -32,14 +32,18 @@ function populateContent(books) {
     /* Loop every category for a book */
     for (const [key, value] of Object.entries(books[i])) {
       key == 'rating'
-        ? $row.append(`<td data-index="${i}" id="${key}">${value} / 10 </td>`)
+        ? $row.append(
+            `<td data-index="${i}" id="${key}" class="w-25">${value} / 10 </td>`
+          )
         : $row.append(
-            `<td data-index="${i}" id="${key}">${capitalizeString(value)}</td>`
+            `<td data-index="${i}" id="${key}" class="w-25">${capitalizeString(
+              value
+            )}</td>`
           );
     }
     /* $row.append('<a href="#" class="edit-btn">Edit</a>'); */
     $row.append(
-      `<button type="submit" data-target="/edit" data-index="${i}" class="edit-btn">Edit</button>`
+      `<td class="container d-flex justify-content-center"><button type="submit" data-target="/edit" data-index="${i}" class="row btn btn-outline-danger w-75 edit-btn">Edit</button></td>`
     );
     $listBody.append($row);
     totalBooks++;

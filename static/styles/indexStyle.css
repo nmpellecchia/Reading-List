@@ -1,41 +1,140 @@
+:root {
+  --main-color-base: #f83920;
+  --main-color-shadow: #cd1c05;
+  --main-color-light: #f89220;
+  --white: #fcf3e8;
+  --white-shadow: #f0d0ab;
+  --black: #16000c;
+  --text-font: 'Acme', sans-serif;
+  --title-font: 'Bangers', cursive;
+}
+
 body {
   width: 100%;
   height: 100vh;
   padding: 0;
   margin: 0;
+  background-image: /* linear-gradient(var(--white), var(--white-shadow)); */ var(
+    --white
+  );
+  font-family: var(--text-font);
+  color: var(--black);
 }
+
+/* Navbar */
 
 nav.container-fluid {
-  background: rgb(53, 51, 197);
+  background: var(--main-color-base);
 }
 
-.go-back-top-btn {
-  color: white;
+.nav-btn {
+  color: var(--white);
+  padding: 0.5rem;
 }
 
-.go-back-top-btn:hover {
-  color: white;
+.nav-btn:hover {
+  color: var(--white);
   text-decoration: none;
 }
 
-.go-back-top-btn::after {
+.nav-btn::after {
   display: block;
   content: '';
   height: 3px;
   width: 0%;
-  background: white;
+  background: var(--white);
   transition: 500ms;
 }
 
-.go-back-top-btn:hover:after {
+.nav-btn:hover:after {
   width: 30%;
   transition: 500ms;
 }
 
-.title.main {
-  background: rgb(53, 51, 197);
+/* Header */
+
+header {
+  width: 100vw;
 }
 
-.title > * {
-  text-align: center;
+.title-wrapper {
+  background: var(--main-color-base);
+  font-family: var(--title-font);
+}
+
+.header-deco {
+  width: 100%;
+}
+
+.header-deco-triangle {
+  /* generate the shape using left,right and bottom borders */
+  background: var(--main-color-base);
+  border-color: transparent var(--main-color-base) var(--white-shadow)
+    var(--main-color-base);
+  border-style: solid;
+  /* make it span the entire width. 50 / 50 goes outside the windows */
+  border-width: 0 49.93vw 17vw 49.93vw;
+  height: 0;
+  width: 0;
+
+  -webkit-box-shadow: 0px 28px 15px 2px var(--white-shadow);
+  box-shadow: 0px 28px 15px 2px var(--white-shadow);
+}
+
+/* Buttons */
+
+.btn {
+  font-family: var(--title-font);
+}
+
+.btn-danger {
+  background-color: var(--main-color-base);
+  color: var(--white);
+}
+
+.btn-danger:hover {
+  background-color: var(--main-color-light);
+  border-color: var(--main-color-light);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--main-color-base);
+  border-color: var(--main-color-base);
+}
+
+/* Table */
+
+table.book-list {
+  table-layout: fixed;
+}
+
+thead.thead-dark {
+  border: 2px solid var(--main-color-shadow);
+  border-bottom: 2px solid var(--main-color-base);
+}
+
+tbody.list-body {
+  border: 2px solid var(--main-color-shadow);
+  border-bottom: 2px solid var(--main-color-base);
+}
+
+tr.categories-row th.category {
+  background-color: var(--main-color-shadow);
+  border-color: var(--main-color-shadow);
+  color: var(--white);
+}
+
+tr.thead-deco th {
+  border: none;
+}
+
+tr.thead-deco th .thead-deco-triangle {
+  overflow: hidden;
+  background: var(--main-color-shadow);
+  border-color: transparent transparent var(--main-color-base)
+    var(--main-color-shadow);
+  border-style: solid;
+  border-width: 0 0 2vh 65vw;
+  height: 0;
+  width: 100%;
 }
