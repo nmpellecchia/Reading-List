@@ -50,6 +50,34 @@ nav.container-fluid h2,
   transition: 500ms;
 }
 
+/* Form */
+
+form {
+  border: 2px solid var(--main-color-shadow);
+  border-radius: 20px;
+}
+
+/* Buttons */
+
+.btn {
+  font-family: var(--title-font);
+}
+
+.btn-danger {
+  background-color: var(--main-color-base);
+  color: var(--white);
+}
+
+.btn-danger:hover {
+  background-color: var(--main-color-light);
+  border-color: var(--main-color-light);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--main-color-base);
+  border-color: var(--main-color-base);
+}
+
 /* body {
   width: 100%;
   height: 100vh;
