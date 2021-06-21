@@ -1,4 +1,56 @@
+:root {
+  --main-color-base: #f83920;
+  --main-color-shadow: #cd1c05;
+  --main-color-light: #f89220;
+  --white: #fcf3e8;
+  --white-shadow: #f0d0ab;
+  --black: #16000c;
+  --text-font: 'Acme', sans-serif;
+  --title-font: 'Bangers', cursive;
+}
+
 body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: var(--white);
+  font-family: var(--text-font);
+  color: var(--black);
+}
+
+/* Navbar */
+
+nav.container-fluid {
+  background: var(--main-color-base);
+}
+
+nav.container-fluid h2,
+.nav-btn {
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.nav-btn:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-btn::after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: var(--white);
+  transition: 500ms;
+}
+
+.nav-btn:hover:after {
+  width: 30%;
+  transition: 500ms;
+}
+
+/* body {
   width: 100%;
   height: 100vh;
   padding: 0;
@@ -48,3 +100,4 @@ form > * {
 .user-inputs > * {
   margin: 1rem;
 }
+ */
