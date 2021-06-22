@@ -19,6 +19,11 @@ body {
   color: var(--black);
 }
 
+h1,
+h2 {
+  font-family: var(--title-font);
+}
+
 /* Navbar */
 
 nav.container-fluid {
