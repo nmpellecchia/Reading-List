@@ -14,9 +14,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background-image: /* linear-gradient(var(--white), var(--white-shadow)); */ var(
-    --white
-  );
+  background-image: var(--white);
   font-family: var(--text-font);
   color: var(--black);
 }
