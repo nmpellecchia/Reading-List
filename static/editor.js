@@ -38,12 +38,12 @@ $(document).ready(function () {
       deleteBook();
       /* Now add with the new values */
       addBook();
-      window.location.href = '/';
+      setTimeout(() => (window.location.href = '/'), 2000);
     }
   });
 
   $('.delete').click(() => {
     deleteBook();
-    window.location.href = '/';
+    setTimeout(() => (window.location.href = '/'), 2000);
   });
 });

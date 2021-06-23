@@ -13,7 +13,8 @@ $(document).ready(function () {
 
   $(document).on('click', '.edit-btn', async function (e) {
     /* get the title inside the table */
-    const $bookTitle = $(e.target).siblings('#title');
+    const $bookTitle = $(e.target).parent().siblings('#title');
+    console.log($bookTitle);
     const lowercaseTitle = convertToLowercase($bookTitle[0].textContent);
     /* get the book from the database */
     const userBook = await getBook(lowercaseTitle);
