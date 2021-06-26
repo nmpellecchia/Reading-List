@@ -10,4 +10,22 @@ A little project whose objective was to help me learn how different languages co
 
 # Technologies used
 
-The simple API uses Python, and the client side JQuery. With HTML and Bootstrapp CSS.
+The simple API uses Python, and the client side JQuery. With HTML and Bootstrap CSS.
+
+# Getting started
+
+First do
+
+`$ npm install`
+
+This app requires Flask to work. Use
+
+`$ pip install -r requirements.txt `
+
+To run and test the app
+
+`export FLASK_APP=index.py`
+
+`export FLASK_ENV=develompent`
+
+`flask run`
