@@ -29,3 +29,10 @@ To run and test the app
 `export FLASK_ENV=develompent`
 
 `flask run`
+
+# How it works
+
+The table is dinamically filled after the JS file sends a get request. After that, it will start to listen if the user wants to change some element.
+
+The editor will check if the user wanted to edit add a new book or edit an already existing one. Filling the inputs with the correct information if that's the case.
+After clicking the submit button, and if every input is correct, the program will send the request and the python file will add the corresponding book to the "database" (Given that this is a small project. Created for the purpose of learning how to make multiple languages interact with each other. The program deals with little aumont of data. It uses a CSV file).
