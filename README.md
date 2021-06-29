@@ -39,6 +39,11 @@ After clicking the submit button, and if every input is correct, the program wil
 
 To add it, flask will open the file and add it at the end. Or, in case of an edit, delete the old value and add the new one. Again, is done this way because with the little amount of data it needs to handle, it will not consume a huge amount of resources.
 
+# How to use
+
+To add a book: - Click the button "Add book" - Fill all the camps with the correct information - Click submit - You'll be redirected to the landing page. The book will be displayed inside the list.
+To delete / edit a book - Find the book you want to edit / delete - Click "Edit" - To delete: Click the delete button. You'll be redirected to the landing page and the book removed from the list - To edit: Change the camp you desire to update - Click Submit
+
 # Problems I faced
 
 As this was my first time using Flask, I had to learn the basics and how to render the html templates correctly.
