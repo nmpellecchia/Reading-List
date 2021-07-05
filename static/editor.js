@@ -33,7 +33,6 @@ $(document).ready(function () {
     if (areEmptyValues()) {
       showErrorMsg();
     } else {
-      console.log('This should not appear');
       /* Delete the book from the database*/
       deleteBook();
       /* Now add with the new values */
