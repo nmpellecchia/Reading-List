@@ -11,17 +11,17 @@
 ### Table of contents
 
 - [ENGLISH](#-eng-)
-  - [Welcome to my Reading List Project!](#welcome-to-my-reading-list-project-)
+  - [Welcome to my Reading List Project!](#welcome-to-my-reading-list-project)
   - [Technologies used](#technologies-used)
   - [Getting started](#getting-started)
   - [How to use](#how-to-use)
   - [Problems I faced](#problems-i-faced)
   - [Future Features](#future-features)
 - [ESPAÑOL](#-esp-)
-  - [Bienvenido a mi proyecto de lista de lectura!](#bienvenido-a-mi-proyecto-de-lista-de-lectura-)
-  - [Tecnologías usadas](#tecnolog-as-usadas)
-  - [Cómo comenzar](#c-mo-comenzar)
-  - [Cómo se usa](#c-mo-se-usa)
+  - [Bienvenido a mi proyecto de lista de lectura!](#bienvenido-a-mi-proyecto-de-lista-de-lectura)
+  - [Tecnologías usadas](#tecnologias-usadas)
+  - [Cómo comenzar](#como-comenzar)
+  - [Cómo se usa](#como-se-usa)
   - [Problemas que hubo](#problemas-que-hubo)
   - [Adiciones futuras](#adiciones-futuras)
 
