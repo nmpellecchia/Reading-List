@@ -4,19 +4,40 @@
 ![Back End language](https://img.shields.io/badge/Flask-1.1.2-blue)
 ![Styling Language](https://img.shields.io/badge/Bootstrap-4.4.1-blueviolet)
 
+---
+
+---
+
+### Table of contents
+
+- [ENGLISH](#-eng-)
+  - [Welcome to my Reading List Project!](#welcome-to-my-reading-list-project-)
+  - [Technologies used](#technologies-used)
+  - [Getting started](#getting-started)
+  - [How to use](#how-to-use)
+  - [Problems I faced](#problems-i-faced)
+  - [Future Features](#future-features)
+- [ESPAÑOL](#-esp-)
+  - [Bienvenido a mi proyecto de lista de lectura!](#bienvenido-a-mi-proyecto-de-lista-de-lectura-)
+  - [Tecnologías usadas](#tecnolog-as-usadas)
+  - [Cómo comenzar](#c-mo-comenzar)
+  - [Cómo se usa](#c-mo-se-usa)
+  - [Problemas que hubo](#problemas-que-hubo)
+  - [Adiciones futuras](#adiciones-futuras)
+
 # [ENG]
 
-# Welcome to my Reading List Project!
+## Welcome to my Reading List Project!
 
 A little project whose objective was to help me learn how different languages connect together.
 
-# Technologies used
+## Technologies used
 
 - API made using Flask, A Python library
 - Jquery, Javascript library
 - For the interface: HTML y Bootstrap
 
-# Getting started
+## Getting started
 
 First do
 
@@ -34,7 +55,7 @@ To run and test the app
 
 `flask run`
 
-# How to use
+## How to use
 
 - To add a book:
   - Click the button "Add book"
@@ -46,31 +67,31 @@ To run and test the app
   - To delete: Click the delete button. You'll be redirected to the landing page and the book removed from the list
   - To edit: Change the camp you desire to update - Click Submit
 
-# Problems I faced
+## Problems I faced
 
 - As this was my first time using Flask, I had to learn the basics and how to render the html templates correctly.
 - This was also my first formal attempt (After some individual tests) posting requests. Before I only did get request.
 - I redirected the user too fast and the program wasn't able to finish updating the database. A simple timeOut solved the problem.
 
-# Future Features
+## Future Features
 
 - Allow users to order the list with status or ranking (Now is only alphabetically)
 - Alert user if the book they want to add is already saved
 - Add more information about the book (e.g. starting and finish date)
 
-# [ESP]
+## [ESP]
 
-# Bienvenido a mi proyecto de lista de lectura!
+## Bienvenido a mi proyecto de lista de lectura!
 
 Es un pequeño proyecto con el objetivo de ayudarme a comprender como distintos lenguajes se conectan entre sí.
 
-# Tecnologías usadas
+## Tecnologías usadas
 
     - API hecha con Flask, librería de Python
     - Jquery, libería de Javascript
     - HTML y Bootstrap para la interfaz
 
-# Cómo comenzaar
+## Cómo comenzar
 
 Primeramente escribe en la consola:
 
@@ -88,7 +109,7 @@ Para correr y testear la app:
 
 `flask run`
 
-# Cómo se usa
+## Cómo se usa
 
 - Para añadir un libro:
 
@@ -103,13 +124,13 @@ Para correr y testear la app:
   - Para eliminar: Click en el botón "Delete". Serás redireccionado a la página inicial y el libro removido de la lista
   - Para editar: Cambia el / los campos que quieras actualizar y Clickea "Submit"
 
-# Problemas que hubo
+## Problemas que hubo
 
 - Dado que este era mi primer intento usando Flask, tuve que aprender las bases para cargar las plantillas de HTML.
 - Este también fue mi primer intento formal (Luego de pruebas individuales) usando POST request. Anteriormente solo había utilizado GET request.
 - Redirigía a los usuarios demasiado rápido y el programa no lograba finalizar de actualizar la base de datos. Unos time Outs fueron necesarios para solucionar este problema.
 
-# Adiciones futuras
+## Adiciones futuras
 
 - Permitir al usuario ordenar la lista por estado o ranking (Actualmente es solo por orden alfabético)
 - Alertar al usuario si el libro que desea añadir ya se encuentra guardado
