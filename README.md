@@ -52,6 +52,12 @@ To run and test the app
 - This was also my first formal attempt (After some individual tests) posting requests. Before I only did get request.
 - I redirected the user too fast and the program wasn't able to finish updating the database. A simple timeOut solved the problem.
 
+# Future Features
+
+- Allow users to order the list with status or ranking (Now is only alphabetically)
+- Alert user if the book they want to add is already saved
+- Add more information about the book (e.g. starting and finish date)
+
 # [ESP]
 
 # Bienvenido a mi proyecto de lista de lectura!
@@ -102,3 +108,9 @@ Para correr y testear la app:
 - Dado que este era mi primer intento usando Flask, tuve que aprender las bases para cargar las plantillas de HTML.
 - Este también fue mi primer intento formal (Luego de pruebas individuales) usando POST request. Anteriormente solo había utilizado GET request.
 - Redirigía a los usuarios demasiado rápido y el programa no lograba finalizar de actualizar la base de datos. Unos time Outs fueron necesarios para solucionar este problema.
+
+# Adiciones futuras
+
+- Permitir al usuario ordenar la lista por estado o ranking (Actualmente es solo por orden alfabético)
+- Alertar al usuario si el libro que desea añadir ya se encuentra guardado
+- Añadir más información sobre el libro (ej.: Fecha de inicio y finalización)
