@@ -12,7 +12,9 @@ A little project whose objective was to help me learn how different languages co
 
 # Technologies used
 
-The simple API uses Python, and the client side JQuery. With HTML and Bootstrap CSS.
+- API made using Flask, A Python library
+- Jquery, Javascript library
+- For the interface: HTML y Bootstrap
 
 # Getting started
 
@@ -31,15 +33,6 @@ To run and test the app
 `export FLASK_ENV=develompent`
 
 `flask run`
-
-<!-- # How it works
-
-The table is dinamically filled after the JS file sends a get request. After that, it will start to listen if the user wants to change some element.
-
-The editor will check if the user wanted to edit add a new book or edit an already existing one. Filling the inputs with the correct information if that's the case.
-After clicking the submit button, and if every input is correct, the program will send the request and the flask file will add the corresponding book to the "database" (Given that this is a small project. Created for the purpose of learning how to make multiple languages interact with each other. The program deals with little aumont of data. It uses a CSV file).
-
-To add it, flask will open the file and add it at the end. Or, in case of an edit, delete the old value and add the new one. Again, is done this way because with the little amount of data it needs to handle, it will not consume a huge amount of resources. -->
 
 # How to use
 
